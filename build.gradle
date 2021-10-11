@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.2'
+        //dbflow
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        //greendao
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.3.0'
+        //realm
+        classpath "io.realm:realm-gradle-plugin:10.8.0"
+
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.10"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url "https://www.jitpack.io" }
+    }
+}
+ext {
+    androidCompileSdkVersion = 30
+    androidBuildToolsVersion = '30.0.2'
+    androidMinSdkVersion = 16
+    androidTargetSdkVersion = 29
+}
